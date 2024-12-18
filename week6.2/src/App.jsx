@@ -1,32 +1,41 @@
-import {useEffect,useState} from 'react'
+import { useEffect, useState } from "react";
 
-function App(){
-  const [exchangeData,setExchangeData] =useState({});
-  const[bankData,setBankData] = useState({});
-
-
-  useEffect(()=> {
-    fetch("https://www.google.com",async (res) => {
-      const json = await res.json();
-      setBankData(json);
-    });
-  },[])
+function App() {
+  const [exchangeData, setExchangeData] = useState({});
+  const [bankData, setBankData] = useState({});
 
   useEffect(() => {
-    setTimeout(()=>{
+    const fetchData = async () => {
+      try {
+        const res = await fetch("https://api.example.com/bank-data"); // Replace with a valid API URL
+        const json = await res.json();
+        setBankData(json);
+      } catch (error) {
+        console.error("Error fetching bank data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
       setExchangeData({
-        return : 100
-      })
-    },1000)
-  },[])
+        returnValue: 100, // Changed from `return`
+      });
+    }, 1000);
+  }, []);
 
-  const incomeTax = (bankData.income + exchangeData.return) * 0.3;
+  // Safeguard against undefined data
+  const income = bankData.income || 0;
+  const exchangeReturn = exchangeData.returnValue || 0;
+  const incomeTax = (income + exchangeReturn) * 0.3;
 
-  return(
+  return (
     <div>
-      hi! there,your income tax returns are  {incomeTax}
+      Hi! There, your income tax returns are {incomeTax.toFixed(2)}
     </div>
-  )
+  );
 }
 
 export default App;
