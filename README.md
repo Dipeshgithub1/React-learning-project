@@ -26,4 +26,4 @@ npx tailwindcss init
 - Method 2: Use Tailwind CSS via CDN
 The quickest way to start using Tailwind CSS is by including a CDN link in the <head> section of your HTML file. Here’s an example:
 
-<link href=”https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css” rel=”stylesheet”>
+- <link href=”https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css” rel=”stylesheet”>
