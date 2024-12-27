@@ -51,3 +51,22 @@ console.log((x < 6 && y < 5));
 console.log((x < 6 || y > 6));
 //NOT
 console.log(!(x < 6))
+
+
+
+let  a = 10;
+
+function examp(){
+    let b = 20;
+    
+    if(true){
+        var c = 30;
+        const d = 40;
+        
+    }
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    //console.log(d);
+}
+examp();
