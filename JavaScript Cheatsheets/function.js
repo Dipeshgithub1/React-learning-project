@@ -27,3 +27,28 @@ evalExample();
 const url = "https://example.com/hello world?query=javascript";
 const encodedURL = encodeURI(url); 
 console.log(encodedURL);
+
+
+
+
+//Program to validate the email address
+
+function validateEmail(email) {
+    const re = /\S+@\S+\.\S+/g;
+    
+    // Check if email is valid
+    let result = re.test(email);
+    
+    if (result) {
+        console.log("The email is valid.");
+    } else {
+        console.log("The email is not valid.");
+    }
+}
+
+// Test cases
+let email = "abc@gmail.com";
+validateEmail(email);
+
+email = "abc#$#@45com";
+validateEmail(email);
