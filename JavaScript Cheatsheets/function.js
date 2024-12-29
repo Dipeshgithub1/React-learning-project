@@ -52,3 +52,29 @@ validateEmail(email);
 
 email = "abc#$#@45com";
 validateEmail(email);
+
+
+
+
+
+const num = [16, 25];
+
+/* Using JS map() Method */
+console.log(num.map(Math.sqrt));
+
+const ages = [19, 37, 16, 42];
+
+/* Using JS filter() Method */
+console.log(ages.filter(checkAdult));
+
+function checkAdult(age) {
+    return age >= 18;
+}
+
+/* Using JS reduce() Method */
+const numbers = [165, 84, 35];
+console.log(numbers.reduce(myFunc));
+
+function myFunc(total, num) {
+    return total - num;
+}
