@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    /* CSS is used to make the output looks good */
+    <style>
+        #geeks {
+            border: 1px solid black;
+            padding: 15px;
+            width: 60%;
+        }
+
+        h1 {
+            color: green;
+        }
+    </style>
+    <script>
+        function hiThere() {
+            alert("Hi there!");
+        }
+        function focused() {
+            var e = document.getElementById("inp");
+            if (confirm("Got it?")) {
+                e.blur();
+            }
+        }
+
+        /* Mouseover event */
+        document.getElementById("hID").addEventListener("mouseover", over);
+
+        /* Mouseoout event */
+        document.getElementById("hID").addEventListener("mouseout", out);
+
+        /* Over on green */
+        function over() {
+            document.getElementById("hID").style.color = "green";
+        }
+
+        /* Leaving Out Black */
+        function out() {
+            document.getElementById("hID").style.color = "black";
+        }
+
+        function Geeks() {
+            var x = document.getElementById("GFG").value;
+            document.getElementById("sudo").innerHTML = "Selected Subject: " + x;
+        }
+
+        /* Success alert */
+        function Geek() {
+            alert("Form submitted successfully.");
+        }
+        function Function() {
+            document.getElementById("geeks").style.fontSize = "30px";
+            document.getElementById("geeks").style.color = "green";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- onload event -->
+    <img onload="alert('Image completely loaded')" alt="GFG-Logo"
+        src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/GeeksforGeeksLogoHeader.png" />
+    <br />
+
+    <!-- onclick event -->
+    <h2>onclick event</h2>
+    <button type="button" onclick="hiThere()" on>
+        Click me
+    </button>
+
+    <!-- onfocus event -->
+    <h2>onfocus event</h2>
+    <p>Take the focus into the input box below:</p>
+    <input id="inp" onfocus="focused()" />
+
+    <!-- onblur Event -->
+    <h2>onblur event</h2>
+    <p>
+        Write something in the input box and
+        then click elsewhere in the document
+        body.
+    </p>
+    <input onblur="alert(this.value)" />
+
+    <!-- onmouseover and onmouseout event -->
+    <h2 id="hID">onmouseover event</h2>
+    <h2>onchange Event</h2>
+    <p>Choose Subject:</p>
+    <select id="GFG" onchange="Geeks()">
+        <option value="Data Structure">
+            Data Structure
+        </option>
+        <option value="Algorithm">
+            Algorithm
+        </option>
+        <option value="Computer Network">
+            Computer Network
+        </option>
+        <option value="Operating System">
+            Operating System
+        </option>
+        <option value="HTML">
+            HTML
+        </option>
+    </select>
+
+    <p id="sudo"></p>
+
+    <!-- onsubmit event -->
+    <h2>onsubmit event</h2>
+    <form onsubmit="Geek()">
+        First Name:<input type="text" value="" />
+        <br />
+        Last Name:<input type="text" value="" />
+        <br />
+        <input type="submit" value="Submit" />
+    </form>
+
+    <!--ondrag event -->
+    <h2>ondrag event attribute</h2>
+    <div id="geeks" ondrag="Function()">
+        GeeksforGeeks: A computer science portal for geeks
+    </div>
+</body>
+
+</html>
