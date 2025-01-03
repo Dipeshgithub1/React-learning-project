@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Window Methods</title>
+    /* CSS is used to make the output looks good */
+    <style>
+        .gfg {
+            font-size: 36px;
+        }
+
+        form {
+            float: right;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gfg">JavaScript Window Methods</div>
+    <br />
+    <button onclick="windowOpen()">
+        JavaScript window Open
+    </button>
+    <button onclick="resizeWin()">
+        JavaScript window resizeTo
+    </button>
+    <button onclick="windowBlur()">
+        JavaScript window Blur
+    </button>
+    <button onclick="windowFocus()">
+        JavaScript window Focus
+    </button>
+    <button onclick="windowClose()">
+        JavaScript window Close
+    </button>
+    <br />
+    <br />
+    <p id="g"></p>
+    <form>
+        <button onclick="setTimeout(wlcm, 2000);">
+            Alert after 2 Second
+        </button>
+        <button onclick="geek()">Click me!</button>
+        <input type="button" value="Print" onclick="window.print()" />
+    </form>
+    <br /><br />
+    <button id="btn" onclick="fun()" style="color: green">
+        JavaScript Used setTimeOut
+    </button>
+    <button id="btn" onclick="stop()">
+        JavaScript clearTimeout
+    </button>
+    <script>
+        var gfgWindow;
+
+        // Function that open the new Window
+        function windowOpen() {
+            gfgWindow = window.open(
+                "https://www.geeksforgeeks.org/",
+                "_blank",
+                "width=200, height=200"
+            );
+        }
+
+        // Function that Resize the open Window
+        function resizeWin() {
+            gfgWindow.resizeTo(400, 400);
+            gfgWindow.focus();
+        }
+
+        // Function that Closes the open Window
+        function windowClose() {
+            gfgWindow.close();
+        }
+
+        // Function that blur the open Window
+        function windowBlur() {
+            gfgWindow.blur();
+        }
+
+        // Function that focus on open Window
+        function windowFocus() {
+            gfgWindow.focus();
+        }
+
+        // Alert function
+        function wlcm() {
+            alert("Welcome to GeeksforGeeks");
+        }
+
+        // Prompt function
+        function geek() {
+            var doc = prompt("Please enter some text", "GeeksforGeeks");
+            if (doc != null) {
+                document.getElementById("g").innerHTML = "Welcome to " + doc;
+            }
+        }
+
+        // Function setTimeout and clearTimeout
+        var t;
+        function color() {
+            if (document.getElementById("btn").style.color == "blue") {
+                document.getElementById("btn").style.color = "green";
+            } else {
+                document.getElementById("btn").style.color = "blue";
+            }
+        }
+        function fun() {
+            t = setTimeout(color, 3000);
+        }
+        function stop() {
+            clearTimeout(t);
+        }
+    </script>
+</body>
+
+</html>
