@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>The Window properties</h1>
+    <h2>The origin Property</h2>
+
+    <p id="demo"></p>
+    <br />
+    <button type="button" onclick="getResolution();">
+        Get Resolution
+    </button>
+    <br />
+    <button type="button" onclick="checkConnectionStatus();">
+        Check Connection Status
+    </button>
+    <br />
+    <button type="button" onclick="getViews();">
+        Get Views Count</button>
+    <br />
+    <p>
+        <button onclick="closeWin()">
+            Close "myWindow"
+        </button>
+    </p>
+
+    <script>
+        // JS location property
+        let origin = window.location.origin;
+        document.getElementById("demo").innerHTML = origin;
+
+        // JS screen property
+        function getResolution() {
+            alert("Your screen is: " + screen.width + "x" + screen.height);
+        }
+
+        // JS toolbar property
+        var visible = window.toolbar.visible;
+
+        // JS navigator property
+        function checkConnectionStatus() {
+            if (navigator.onLine) {
+                alert("Application is online.");
+            } else {
+                alert("Application is offline.");
+            }
+        }
+        // JS history property
+        function getViews() {
+            alert(
+                "You've accessed " + history.length + " web pages in this session."
+            );
+        }
+        // JS close property
+        let myWindow;
+        function closeWin() {
+            if (myWindow) {
+                myWindow.close();
+            }
+        }
+    </script>
+</body>
+
+</html>
