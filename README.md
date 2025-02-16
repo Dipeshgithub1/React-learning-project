@@ -1,4 +1,4 @@
-# React Learning Project
+## React Learning Project
 
 ## 📌 Introduction
 Welcome to the **React Learning Project**! 🚀 This repository is dedicated to practicing and mastering React.js fundamentals by building various components, handling state, and integrating APIs.
@@ -70,6 +70,7 @@ For any queries, feel free to reach out:
 - **Email**: dipesh.bcasdu@gmail.com
 
 ---
+
 Happy Coding! 🚀🎉
 
 - npx tailwindcss build styles.css -o output.css
