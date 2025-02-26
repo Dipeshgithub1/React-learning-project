@@ -71,7 +71,7 @@ For any queries, feel free to reach out:
 
 ---
 
-Happy Coding! 🚀🎉
+Happy Coding!    🚀🎉
 
 - npx tailwindcss build styles.css -o output.css
 
