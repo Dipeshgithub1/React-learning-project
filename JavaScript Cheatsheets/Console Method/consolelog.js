@@ -14,4 +14,4 @@ console.info("This is an info message")
 console.table([{name: 'alice',age:25},{name:'bob',age:30}])
 
 //console.clear() - used to clear the console
-console.clear()
+//console.clear()
