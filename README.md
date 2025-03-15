@@ -1,9 +1,11 @@
 ## React Learning Project
 
+
 ## 📌 Introduction
 Welcome to the **React Learning Project**! 🚀 This repository is dedicated to practicing and mastering React.js fundamentals by building various components, handling state, and integrating APIs.
 
 ## 🎯 Objectives
+
 - Learn the core concepts of React.js
 - Explore component-based architecture
 - Understand state management using hooks
@@ -11,6 +13,7 @@ Welcome to the **React Learning Project**! 🚀 This repository is dedicated to 
 - Enhance UI/UX with CSS frameworks like Tailwind or Bootstrap
 
 ## 🛠️ Technologies Used
+
 - **React.js** - Frontend framework
 - **JavaScript (ES6+)** - Core programming language
 - **CSS / TailwindCSS / Bootstrap** - Styling
