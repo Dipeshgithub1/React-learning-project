@@ -2,6 +2,7 @@
 
 
 ## 📌 Introduction
+
 Welcome to the **React Learning Project**! 🚀 This repository is dedicated to practicing and mastering React.js fundamentals by building various components, handling state, and integrating APIs.
 
 ## 🎯 Objectives
@@ -37,6 +38,7 @@ React-learning-project/
 ```
 
 ## 🚀 Getting Started
+
 ### 1️⃣ Clone the repository
 ```sh
 git clone https://github.com/Dipeshgithub1/React-learning-project.git
