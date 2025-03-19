@@ -22,6 +22,8 @@ Welcome to the **React Learning Project**! 🚀 This repository is dedicated to 
 - **React Router** - For navigation (if applicable)
 
 ## 📂 Project Structure
+
+
 ```
 React-learning-project/
 │── src/
@@ -40,12 +42,14 @@ React-learning-project/
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the repository
+
 ```sh
 git clone https://github.com/Dipeshgithub1/React-learning-project.git
 cd React-learning-project
 ```
 
 ### 2️⃣ Install dependencies
+
 ```sh
 npm install  # or yarn install
 ```
